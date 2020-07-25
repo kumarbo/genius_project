@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+input {
+  font-family: 'FontAwesome'; }
+
+::placeholder {
+  color: black; }
+
+.container-fluid {
+  background: whitesmoke; }
+  .container-fluid .nav_section nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: whitesmoke;
+    align-items: center; }
+    .container-fluid .nav_section nav .logo_div {
+      flex: 1; }
+      .container-fluid .nav_section nav .logo_div img {
+        height: 60px;
+        width: 100px; }
+    .container-fluid .nav_section nav .search_div {
+      flex: 2;
+      text-align: center; }
+      .container-fluid .nav_section nav .search_div input[type=search] {
+        text-align: -webkit-center;
+        text-align: center;
+        padding: 6px 30px;
+        background: none;
+        opacity: 0.5;
+        outline: none; }
+        .container-fluid .nav_section nav .search_div input[type=search]:focus {
+          border: 2px solid orangered; }
+    .container-fluid .nav_section nav .upload_div {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .container-fluid .nav_section nav .upload_div div {
+        margin-right: 20px; }
+        .container-fluid .nav_section nav .upload_div div button {
+          border: none;
+          outline: none;
+          background: orangered;
+          padding: 5px 30px;
+          border-radius: 10px;
+          color: white; }
+          .container-fluid .nav_section nav .upload_div div button:hover {
+            background: black; }
+        .container-fluid .nav_section nav .upload_div div .fa {
+          padding-top: 10px; }
+        .container-fluid .nav_section nav .upload_div div span {
+          background: grey;
+          border-radius: 50%;
+          padding: 5px;
+          display: block; }
+
+.main_section .heading_div {
+  font-size: 28px;
+  font-weight: bold; }
+  .main_section .heading_div span {
+    display: block;
+    padding: 30px 0px 20px 0px; }
+.main_section .gallery_div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(60px, auto);
+  /* The Modal (background) */
+  /* Modal Content */ }
+  .main_section .gallery_div div {
+    height: 280px; }
+    .main_section .gallery_div div img {
+      height: 100%;
+      width: 100%; }
+  .main_section .gallery_div .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */ }
+  .main_section .gallery_div .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; }
+.main_section .pagination_div {
+  text-align: center; }
+  .main_section .pagination_div span {
+    padding: 30px 0px 20px 0px;
+    display: block; }
+.main_section .selection_div {
+  text-align: center; }
+  .main_section .selection_div span #show_text {
+    padding-right: 10px;
+    font-weight: bold;
+    opacity: 0.5; }
+  .main_section .selection_div select {
+    padding: 2px 7px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold; }
+    .main_section .selection_div select option {
+      padding: 10px 0px; }
+.main_section .divider_section {
+  height: 3px;
+  background: whitesmoke;
+  margin-top: 30px; }
+.main_section footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 10px 0px; }
+  .main_section footer ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+    .main_section footer ul li {
+      list-style-type: none;
+      float: left;
+      margin-right: 20px; }
+      .main_section footer ul li a {
+        text-decoration: none;
+        padding-right: 30px;
+        display: inline-block; }
+        .main_section footer ul li a span {
+          padding-right: 30px;
+          position: relative; }
+        .main_section footer ul li a .fa-circle {
+          font-size: 6px;
+          display: inline-block;
+          position: absolute;
+          margin-top: 7px; }
+.main_section .copyright_section {
+  padding-top: 15px;
+  text-align: center; }
+  .main_section .copyright_section img {
+    height: 40px;
+    width: 80px;
+    padding-right: 15px; }
+  .main_section .copyright_section span {
+    font-size: 14px;
+    opacity: 0.5; }
+
+/*# sourceMappingURL=style.css.map */

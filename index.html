@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="./scss/style.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="container nav_section">
+
+        <!--nav section-->
+        <nav>
+            <div class="logo_div">
+                <img src="./asset/floop.png">
+            </div>
+    
+            <div class="search_div">
+                <input type="search" placeholder="&#xf002; Search">
+    
+            </div>
+    
+            <div class="upload_div">
+                <div>
+                    <button>Upload</button>
+                </div>
+                <div>
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </div>
+                <div><span>MB</span></div>
+            </div>
+        </nav>
+
+     
+
+    </div>
+
+</div>
+
+</div>
+
+<!--main section-->
+<div class="container main_section">
+    <!--heading section-->
+    <div class="heading_div">
+     <span>Trending Now</span>
+     </div>
+
+     <!--image  gallery section-->
+     <div class="gallery_div">
+         <div ><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="1"></div>
+         <div ><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="2"></div>
+         <div><img src="./asset/img3.jpg" alt="image"></div>
+         <div><img src="./asset/img4.jpg" alt="image"></div>
+         <div><img src="./asset/img5.jpg" alt="image"></div>
+         <div><img src="./asset/img1.jpg" alt="image"></div>
+         <div><img src="./asset/img2.jpg" alt="image"></div>
+         <div><img src="./asset/img3.jpg" alt="image"></div>
+         <div><img src="./asset/img4.jpg" alt="image"></div>
+         <div><img src="./asset/img5.jpg" alt="image"></div>
+         <div><img src="./asset/img1.jpg" alt="image"></div>
+         <div><img src="./asset/img2.jpg" alt="image"></div>
+         <div><img src="./asset/img3.jpg" alt="image"></div>
+         <div><img src="./asset/img4.jpg" alt="image"></div>
+         <div><img src="./asset/img5.jpg" alt="image"></div>
+
+         <div id="myModal" class="modal">   
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
+</div>
+
+<!--loading section-->
+<div class="pagination_div">
+    <span><i class="fa fa-plus" aria-hidden="true"></i> Load More</span>
+</div>
+
+<!--selection section-->
+<div class="selection_div">
+       
+        <span><span id="show_text"> Showing </span>
+        <select name="category" id="select_id">
+            <option value="Trend1"><b>Trending</b></option>
+            <option value="Trend2"><b>Trending</b></option>
+            <option value="Trend3"><b>Trending</b></option>
+            <option value="Trend4"><b>Trending</b></option>
+            
+        </select>
+    </span>
+</div>
+
+<!--divider section--> 
+<div class="divider_section"></div>
+
+<!--footer section-->
+<footer>
+    <ul>
+        <li><a href="#"><span>About Us </span>
+            <i class="fa fa-circle" aria-hidden="true"></i></a></li>
+        <li><a href="#"> <span>Blog</span> <i class="fa fa-circle" aria-hidden="true"></i></a></li>
+        <li><a href="#">  <span>Contact us</span><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+        <li><a href="#"> <span>FAQ</span></a></li>
+    </ul>
+</footer>
+
+<!--copyright section-->
+<div class="copyright_section">
+    <img src="./asset/logo.PNG" alt="logo">
+    <span>Copyright 2020-Puppygram Inc</span>
+</div>
+ </div>
+
+ <script>
+   // Get the modal
+var modal = document.getElementById("myModal");
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function myFunction() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+ </script>
+</body>
+</html>
