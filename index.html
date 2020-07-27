@@ -342,45 +342,45 @@ var loadFile = function(event) {
 
 function myFunc() {
 
-  var x = document.getElementById("select_id").value;
+    var x = document.getElementById("select_id").value;
   var c=0;
     var n = x.length;
    
-    for(i=1; i<n; i++){
+    for(i=1; i<=n; i++){
     
         var b=Math.floor(x/10);
          var d=x%10;
         c=c+d;
+       
         x=b;
-
-
-          if(x==0|1|2|3|4|5|6|7|8|9){
-           		var y=c+x;
-                  
-                  if(y==7){
-            alert('password matched');
-              
-                   }
-  
-else if(y!=7){
-            var m=Math.floor(y/10);
-            var n=y%10;
-            var p=m+n;
-            if(p!=7){
-                alert('password not matched');
-
-            }
-            else if(p==7){
-                alert('password  matched');
-            }
+        }
+        
+         
+         if(c==7){
+         alert('password matched');
+         }
+         else if(c <7){
+         alert('password not matched');
+         }
+         else if(c >7 && c<10){
+          alert('password no matched');
+         }
+         else if(c>10){
+            var m=Math.floor(c/10);
+            var n=c%10;
+         	var p=m+n;
+           if(p==7){
+           alert('password matched');
+           }
+           else{
+           alert('enter right password');
+           }
            
-}
-          }
-
-            
-   
-    
-    }
+         }
+       
+ 
+         
+      
 }
 
  </script>
