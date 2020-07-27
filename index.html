@@ -127,21 +127,27 @@
 
      <!--image  gallery section-->
      <div class="gallery_div">
-         <div ><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="1"></div>
-         <div ><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="2"></div>
-         <div><img src="./asset/img3.jpg" alt="image" onclick="myFunction(this.id)" id="3"></div>
-         <div><img src="./asset/img4.jpg" alt="image" onclick="myFunction(this.id)" id="4"></div>
-         <div><img src="./asset/img5.jpg" alt="image" onclick="myFunction(this.id)" id="5"></div>
-         <div><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="6"></div>
-         <div><img src="./asset/img2.jpg" alt="image"></div>
-         <div><img src="./asset/img3.jpg" alt="image"></div>
-         <div><img src="./asset/img4.jpg" alt="image"></div>
-         <div><img src="./asset/img5.jpg" alt="image"></div>
-         <div><img src="./asset/img1.jpg" alt="image"></div>
-         <div><img src="./asset/img2.jpg" alt="image"></div>
-         <div><img src="./asset/img3.jpg" alt="image"></div>
-         <div><img src="./asset/img4.jpg" alt="image"></div>
-         <div><img src="./asset/img5.jpg" alt="image"></div>
+         <div id="del1">
+           
+                <i class="fa fa-close" id="closeid1"></i>
+           
+        
+             <img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="1"></div>
+
+         <div id="del2"><i class="fa fa-close" id="closeid2"></i><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="2"></div>
+         <div id="del3"><i class="fa fa-close" id="closeid3"></i><img src="./asset/img3.jpg" alt="image" onclick="myFunction(this.id)" id="3"></div>
+         <div id="del4"><i class="fa fa-close" id="closeid4"></i><img src="./asset/img4.jpg" alt="image" onclick="myFunction(this.id)" id="4"></div>
+         <div id="del5"><i class="fa fa-close" id="closeid5"></i><img src="./asset/img5.jpg" alt="image" onclick="myFunction(this.id)" id="5"></div>
+         <div id="del6"><i class="fa fa-close" id="closeid6"></i><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="6"></div>
+         <div id="del7"><i class="fa fa-close" id="closeid7"></i><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="7"></div>
+         <div id="del8"><i class="fa fa-close" id="closeid8"></i><img src="./asset/img3.jpg" alt="image" onclick="myFunction(this.id)" id="8"></div>
+         <div id="del9"><i class="fa fa-close" id="closeid9"></i><img src="./asset/img4.jpg" alt="image" onclick="myFunction(this.id)" id="9"></div>
+         <div id="del10"><i class="fa fa-close" id="closeid10"></i><img src="./asset/img5.jpg" alt="image" onclick="myFunction(this.id)" id="10"></div>
+         <div id="del11"><i class="fa fa-close" id="closeid11"></i><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="11"></div>
+         <div id="del12"><i class="fa fa-close" id="closeid12"></i><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="12"></div>
+         <div id="del13"><i class="fa fa-close" id="closeid13"></i><img src="./asset/img3.jpg" alt="image" onclick="myFunction(this.id)" id="13"></div>
+         <div id="del14"><i class="fa fa-close" id="closeid14"></i><img src="./asset/img4.jpg" alt="image" onclick="myFunction(this.id)" id="14"></div>
+         <div id="del15"><i class="fa fa-close" id="closeid15"></i><img src="./asset/img5.jpg" alt="image" onclick="myFunction(this.id)" id="15"></div>
 
          <div id="myModal" class="modal">  
             <span class="close" onclick="close1()">&times;</span> 
@@ -215,6 +221,8 @@
  </div>
 
  <script>
+
+
    // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -236,7 +244,8 @@ function myFunction(img_id) {
     document.getElementById("s_img").src="./asset/img1.jpg";
     document.getElementById("s1").innerHTML="12";
     document.getElementById("s2").innerHTML="power";
-    modal.style.display = "block"
+    modal.style.display = "block";
+
   }                
   else if(a==2){
     document.getElementById("l_img").src="./asset/img2.jpg";
@@ -252,20 +261,21 @@ function myFunction(img_id) {
   else if(a==3){
     document.getElementById("l_img").src="./asset/img3.jpg";
 
-    document.getElementById("title_id").innerHTML="PUG";
-    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
-    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("title_id").innerHTML="LABRADOR";
+    document.getElementById("second_modal_span1").innerHTML="Labrador is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Labrador is a fastest dog breed.It has unique hair color";
     document.getElementById("s_img").src="./asset/img3.jpg";
     document.getElementById("s1").innerHTML="10";
     document.getElementById("s2").innerHTML="power1";
     modal.style.display = "block"
   }
+  
   else if(a==4){
     document.getElementById("l_img").src="./asset/img4.jpg";
 
-    document.getElementById("title_id").innerHTML="PUG";
-    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
-    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("title_id").innerHTML="BULL";
+    document.getElementById("second_modal_span1").innerHTML="Bull is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Bull is a fastest dog breed.It has unique hair color";
     document.getElementById("s_img").src="./asset/img4.jpg";
     document.getElementById("s1").innerHTML="10";
     document.getElementById("s2").innerHTML="power1";
@@ -274,15 +284,70 @@ function myFunction(img_id) {
   else if(a==5){
     document.getElementById("l_img").src="./asset/img5.jpg";
 
-    document.getElementById("title_id").innerHTML="PUG";
-    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
-    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("title_id").innerHTML="JAPANESE SPITZ";
+    document.getElementById("second_modal_span1").innerHTML="Japanese Spitz is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Japanese Spitz is a fastest dog breed.It has unique hair color";
     document.getElementById("s_img").src="./asset/img5.jpg";
     document.getElementById("s1").innerHTML="10";
     document.getElementById("s2").innerHTML="power1";
     modal.style.display = "block"
   }
   else if(a==6){
+    document.getElementById("l_img").src="./asset/img1.jpg";
+
+    document.getElementById("title_id").innerHTML="GERMAN SHEPARD";
+    document.getElementById("second_modal_span1").innerHTML="German Shepard is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="German Shepard is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img1.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==7){
+    document.getElementById("l_img").src="./asset/img2.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img2.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==8){
+    document.getElementById("l_img").src="./asset/img3.jpg";
+
+    document.getElementById("title_id").innerHTML="LABRADOR";
+    document.getElementById("second_modal_span1").innerHTML="Labrador is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Labrador is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img3.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==9){
+    document.getElementById("l_img").src="./asset/img4.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Bull is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Bull is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img4.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==10){
+    document.getElementById("l_img").src="./asset/img5.jpg";
+
+    document.getElementById("title_id").innerHTML="JAPANESE SPITZ";
+    document.getElementById("second_modal_span1").innerHTML="Japanese Spitz is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Japanese Spitz is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img5.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==11){
     document.getElementById("l_img").src="./asset/img1.jpg";
 
     document.getElementById("title_id").innerHTML="PUG";
@@ -293,6 +358,51 @@ function myFunction(img_id) {
     document.getElementById("s2").innerHTML="power1";
     modal.style.display = "block"
   }
+  else if(a==12){
+    document.getElementById("l_img").src="./asset/img2.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img2.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==13){
+    document.getElementById("l_img").src="./asset/img3.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img3.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==14){
+    document.getElementById("l_img").src="./asset/img4.jpg";
+
+    document.getElementById("title_id").innerHTML="BULL";
+    document.getElementById("second_modal_span1").innerHTML="Bull is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Bull is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img4.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==15){
+    document.getElementById("l_img").src="./asset/img5.jpg";
+
+    document.getElementById("title_id").innerHTML="JAPANESE SPITZ";
+    document.getElementById("second_modal_span1").innerHTML="Japanese Spitz is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Japanese Spitzis a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img5.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+
 
 }
 
@@ -383,6 +493,97 @@ function myFunc() {
       
 }
 
+
+//delete post
+var del = document.getElementById("closeid1");
+del.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del1').style.display="none";
+}
+
+var del2 = document.getElementById("closeid2");
+del2.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del2').style.display="none";
+}
+
+var del3 = document.getElementById("closeid3");
+del3.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del3').style.display="none";
+}
+
+var del4 = document.getElementById("closeid4");
+del4.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del4').style.display="none";
+}
+
+var del5 = document.getElementById("closeid5");
+del5.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del5').style.display="none";
+}
+
+var del6 = document.getElementById("closeid6");
+del6.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del6').style.display="none";
+}
+
+var del7 = document.getElementById("closeid7");
+del7.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del7').style.display="none";
+}
+
+var del8 = document.getElementById("closeid8");
+del8.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del').style.display="none";
+}
+
+var del9 = document.getElementById("closeid9");
+del9.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del').style.display="none";
+}
+
+var del10 = document.getElementById("closeid10");
+del10.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del10').style.display="none";
+}
+
+var del11 = document.getElementById("closeid11");
+del11.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del11').style.display="none";
+}
+
+var del12 = document.getElementById("closeid12");
+del12.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del12').style.display="none";
+}
+
+var del13 = document.getElementById("closeid13");
+del13.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del13').style.display="none";
+}
+
+var del14 = document.getElementById("closeid14");
+del14.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del14').style.display="none";
+}
+
+var del15 = document.getElementById("closeid15");
+del15.onclick=function(){
+    alert('Do you want to delete this post?')
+ document.getElementById('del15').style.display="none";
+}
  </script>
 </body>
 </html>

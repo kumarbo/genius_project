@@ -81,17 +81,17 @@ input { font-family: 'FontAwesome'; }
                 }
         }
         .upload_popup {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            padding-top: 100px; /* Location of the box */
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            padding-top: 100px;
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.7); 
             .upload_content {
                 background-color: #fefefe;
                 margin: auto;
@@ -230,13 +230,41 @@ input { font-family: 'FontAwesome'; }
     grid-template-columns: repeat(3,1fr);
     grid-gap:1em;
     grid-auto-rows:minmax(60px,auto);
+
+    #del1,#del2,#del3,#del4,#del5,#del6,#del7,#del8,#del9,#del10,#del11
+    #del12,#del3,#del14,#del15{
+        display:flex ;
+        justify-content: flex-end;
+    }
     
     div{
         height:auto;
+        display:block;
+  
         img{
             height:100%;
             width:100%;
+            position:relative; 
+           
     
+        }
+        &:hover{
+            
+            .fa-close{
+                display:block;
+                color:#eb9234;
+            }
+        }
+        .fa-close{
+            position: absolute;
+            z-index: 2;
+            
+            font-size: 24px;
+            padding: 10px 20px 0px 0px;
+            display:none;
+            &:hover{
+                color:white;
+            }
         }
 
 
@@ -245,17 +273,17 @@ input { font-family: 'FontAwesome'; }
     //modal
     /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
 
     .close{
         float: right;
@@ -635,7 +663,7 @@ footer{
 
 //responsive nav upto 800px
 
-@media screen and(max-width:1000px){
+@media screen and(max-width:628px){
     .container-fluid{
   
         .nav_section{
@@ -660,6 +688,58 @@ footer{
         }
     }
 
+
+    @media screen and(max-width:681px){
+        .container-fluid{
+      
+            .nav_section{
+                nav{
+                    .logo_div{
+                        flex:0;
+                        margin-right:40px;
+                    }
+                    .search_div{
+                        flex:0 !important;
+                    }
+                    .upload_div{
+                        justify-content: flex-start !important;
+                    }
+                    }
+          
+                }
+    
+                
+    
+                
+            }
+        }
+
+  
+        @media screen and(max-width:991px){
+            .container-fluid{
+          
+                .nav_section{
+                    nav{
+                        .logo_div{
+                            flex:0;
+                            margin-right:40px;
+                        }
+                        .search_div{
+                            flex:1.3;
+                        }
+                        .upload_div{
+                            justify-content: flex-end;
+                        }
+                        }
+              
+                    }
+        
+                    
+        
+                    
+                }
+            }
+    
 
     //responsive upload pop up
     @media screen and (max-width: 400px) and (min-width: 200px){
@@ -780,6 +860,23 @@ footer{
                             }
     }
 }
+                }
+            }
+        }
+    }
+
+
+    //responsive close button
+    @media screen and (max-width:1279px){
+        .main_section{
+            .gallery_div{
+                div{
+                    &:hover{
+                        .fa-close{
+                            display: none;
+                        }
+                        
+                    }
                 }
             }
         }
