@@ -12,6 +12,10 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./scss/style.css">
 
 </head>
@@ -32,12 +36,77 @@
     
             <div class="upload_div">
                 <div>
-                    <button>Upload</button>
+                    <button onclick="uploadFunction()">Upload</button>
                 </div>
-                <div>
+                <div id="icon_div"> 
                     <i class="fa fa-bell" aria-hidden="true"></i>
                 </div>
-                <div><span>MB</span></div>
+                <div id="mb_id"><span>MB</span></div>
+            </div>
+
+            <div class="upload_popup" id="upload_id">
+                <div class="upload_content">
+                    <form action="#" name="myform" class="md-form" onsubmit="myFunc();return false">
+                        <div>
+                           
+                            
+                                <span class="close" onclick="closeup()">&times;</span>
+                            
+                          
+                         </div>
+                         <div>
+                             <label for="heading">Upload your dog photo</label>
+    
+                         </div>
+
+                         <div >
+                             
+                                <label for="upload_photo">Upload a photo</label>
+                            
+                              <div class="inner_div">
+                                <div>
+                                    <label for="upload-photo">Select Photo</label>
+                                    <input type="file" name="photo" id="upload-photo" accept="image/*" onchange="loadFile(event)" required/>
+                                         
+                                     </div>
+                                    
+                                       
+                                
+                         
+                                
+
+                                <div>
+                                    <img src="./asset/img1.jpg" alt="image" id="preview_img">
+                                </div>
+                              </div>
+                               
+                                 
+                             
+                            
+                        </div>
+
+                         <div>
+                             <label for="username">Title</label>
+                             <input type="text" name="username" id="fname" placeholder="what breed is your dog?" required>
+
+                         </div>
+                         <div>
+                             <label for="description">Description<br>(optional)</label>
+                             <textarea name="description" id="des_id" cols="30" rows="10" placeholder="optional" ></textarea>
+                         </div>
+                         <div>
+                             <label for="secret">Secret User ID</label>
+                             <input type="number" name="select" id="select_id" placeholder="######" required>
+                            
+                         </div>
+                         <div class="submit_div">
+                         
+                             <input type="submit" value="submit">
+                         </div>
+                    </form>
+                   
+
+                </div>
             </div>
         </nav>
 
@@ -60,10 +129,10 @@
      <div class="gallery_div">
          <div ><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="1"></div>
          <div ><img src="./asset/img2.jpg" alt="image" onclick="myFunction(this.id)" id="2"></div>
-         <div><img src="./asset/img3.jpg" alt="image"></div>
-         <div><img src="./asset/img4.jpg" alt="image"></div>
-         <div><img src="./asset/img5.jpg" alt="image"></div>
-         <div><img src="./asset/img1.jpg" alt="image"></div>
+         <div><img src="./asset/img3.jpg" alt="image" onclick="myFunction(this.id)" id="3"></div>
+         <div><img src="./asset/img4.jpg" alt="image" onclick="myFunction(this.id)" id="4"></div>
+         <div><img src="./asset/img5.jpg" alt="image" onclick="myFunction(this.id)" id="5"></div>
+         <div><img src="./asset/img1.jpg" alt="image" onclick="myFunction(this.id)" id="6"></div>
          <div><img src="./asset/img2.jpg" alt="image"></div>
          <div><img src="./asset/img3.jpg" alt="image"></div>
          <div><img src="./asset/img4.jpg" alt="image"></div>
@@ -74,10 +143,32 @@
          <div><img src="./asset/img4.jpg" alt="image"></div>
          <div><img src="./asset/img5.jpg" alt="image"></div>
 
-         <div id="myModal" class="modal">   
+         <div id="myModal" class="modal">  
+            <span class="close" onclick="close1()">&times;</span> 
               <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
+                
+
+                <div class="first_modal">
+                    <img src="./asset/img1.jpg" alt="image" id="l_img">
+                </div>
+                <div class="second_modal" id="second_modal_id">
+                    <div class="second_modal_div1">
+                        <h4 onclick="toggle_span()" id="title_id">BLACK dOG</h4>
+                        <span id="second_modal_span1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, nemo!</span>
+                        <span id="second_modal_span2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quae blanditiis ea quasi facere,
+                             aperiam dolores consequatur animi nostrum reiciendis.</span>
+                    </div>
+                    <div class="second_modal_div2">
+                        <div>
+                            <img src="./asset/logo.PNG" alt="" id="s_img">
+                        </div>
+                        <div>
+                            <span id="s1">1294</span>
+                            <span id="s2">Power Fives</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
           
           </div>
@@ -127,27 +218,171 @@
    // Get the modal
 var modal = document.getElementById("myModal");
 
-
+var up = document.getElementById("upload_id");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-function myFunction() {
-  modal.style.display = "block";
+function myFunction(img_id) {
+;
+
+  var a=img_id;
+  if(a==1){
+    document.getElementById("l_img").src="./asset/img1.jpg";
+    document.getElementById("title_id").innerHTML="GERMAN SHEPARD";
+    document.getElementById("second_modal_span1").innerHTML="German Shepard is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="German Shepard is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img1.jpg";
+    document.getElementById("s1").innerHTML="12";
+    document.getElementById("s2").innerHTML="power";
+    modal.style.display = "block"
+  }                
+  else if(a==2){
+    document.getElementById("l_img").src="./asset/img2.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img2.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==3){
+    document.getElementById("l_img").src="./asset/img3.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img3.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==4){
+    document.getElementById("l_img").src="./asset/img4.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img4.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==5){
+    document.getElementById("l_img").src="./asset/img5.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img5.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+  else if(a==6){
+    document.getElementById("l_img").src="./asset/img1.jpg";
+
+    document.getElementById("title_id").innerHTML="PUG";
+    document.getElementById("second_modal_span1").innerHTML="Pug is a fastest dog breed";
+    document.getElementById("second_modal_span2").innerHTML="Pug is a fastest dog breed.It has unique hair color";
+    document.getElementById("s_img").src="./asset/img1.jpg";
+    document.getElementById("s1").innerHTML="10";
+    document.getElementById("s2").innerHTML="power1";
+    modal.style.display = "block"
+  }
+
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    document.getElementById("second_modal_span2").style.display="none";
+  }
+  else if(event.target==up){
+      up.style.display="none";
   }
 }
+//close function
+
+function close1(){
+    document.getElementById("myModal").style.display="none";
+}
+
+//close upload
+function closeup(){
+    document.getElementById("upload_id").style.display="none";
+}
+//toggle span function
+function toggle_span(){
+document.getElementById('second_modal_span2').style.display="block";
+}
+
+
+//upload function
+function uploadFunction(){
+document.getElementById('upload_id').style.display="block";
+}
+
+//choose file
+var loadFile = function(event) {
+	var image = document.getElementById('preview_img');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+
+
+//form validation
+
+
+
+function myFunc() {
+
+  var x = document.getElementById("select_id").value;
+  var c=0;
+    var n = x.length;
+   
+    for(i=1; i<n; i++){
+    
+        var b=Math.floor(x/10);
+         var d=x%10;
+        c=c+d;
+        x=b;
+
+
+          if(x==0|1|2|3|4|5|6|7|8|9){
+           		var y=c+x;
+                  
+                  if(y==7){
+            alert('password matched');
+              
+                   }
+  
+else if(y!=7){
+            var m=Math.floor(y/10);
+            var n=y%10;
+            var p=m+n;
+            if(p!=7){
+                alert('password not matched');
+
+            }
+            else if(p==7){
+                alert('password  matched');
+            }
+           
+}
+          }
+
+            
+   
+    
+    }
+}
+
  </script>
 </body>
 </html>
